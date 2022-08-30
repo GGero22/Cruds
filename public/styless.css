@@ -1,0 +1,61 @@
+    h1 {
+      text-align: center;
+      color: rgb(152, 179, 110);
+    border-width: 20px;
+
+    }
+
+    p {
+      color: red;
+    }
+
+
+    .form{
+      text-align: center;
+      padding: 5px;
+      font-size: 20px;
+    }
+
+    input{
+    /*     text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 8px;
+        padding-right: 10px; */
+
+        font-family:Open Sans,Arial,sans-serif ;
+        text-align: start;
+        width: 502px;
+       font-weight: 400;
+       font-size: 14px;
+
+        padding-top: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        background-color:beige
+     }
+
+     textarea{
+        font-family:Open Sans,Arial,sans-serif ;
+        text-align: start;
+        width: 502px;
+       font-weight: 400;
+       font-size: 14px;
+
+        padding-top: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        background-color: beige;
+     }
+
+     button{
+        padding:25px;
+        background-color: rgb(171, 202, 143);
+        border: 2px;
+     }
+
+label{
+    position: relative;
+    text-align:justify;
+}

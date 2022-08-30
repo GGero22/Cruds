@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePostPost;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -13,6 +15,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         echo("IÑAKI");
@@ -29,16 +32,22 @@ class PostController extends Controller
         echo view ('dashboard.post.create');
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostPost $request) /* cuando se usa el signo de dolar $ es porque se esta haciendo alusion a un metodo */
     {
-        echo "Ya tengo asistencia Geronimo Rodriguez 202008021";
-        //
+
+        echo"El titulo trae ".$request->title; /* el title viene de el create.blade que es el nombre del input que se esta trabajando */
+
+        Post::create($request->validated());
+        return back()->with('status', 'Ya se creo el post :D, Arigato');
+     /*  return redirect('dashboard.post.create')->with('status', 'Post created'); */
     }
 
     /**
